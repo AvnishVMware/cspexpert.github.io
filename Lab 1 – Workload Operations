@@ -1,0 +1,40 @@
+Objective: Create Org VDC Networks & Deploy Three Tier App: 
+Task-1: Create a Routed Organization VDC Network
+You create a routed organization VDC network in the “stark” organization. You must be logged in as the organization administrator.
+
+1.	Log in to the VMware Cloud Director tenant portal - https://vcd.tanzu.lab/tenant/stark
+o	User name: tony 
+o	Password: VMware1! 
+2.	Click vmware-cloud from the virtual data centers card view. 
+3.	In the left pane, click Networks under Networking. 
+4.	Click NEW in the right pane. 
+5.	Click NEXT on the Scope page. 
+6.	In Network Type, leave Routed selected and click NEXT. 
+7.	In Edge Connection, select stark-gateway and click NEXT. 
+8.	In General, configure the settings and then click NEXT. 
+
+Option 	Action 
+Name 	Enter web-frontend in the text box. 
+Description 	Enter Routed organization VDC network for stark in the text box. 
+Gateway CIDR 	Enter 172.16.30.1/24 in the text box. 
+Static IP Pools	172.16.30.200-172.16.30.210
+Primary DNS	8.8.8.8
+
+9.	Review the configuration and click FINISH. 
+10.	The routed organization VDC network is created.
+Create Two more VDC Networks by following the below Table:
+
+Option 	Action 
+Name 	Enter private-snat in the text box. 
+Description 	Enter Routed organization VDC network for stark in the text box. 
+Gateway CIDR 	Enter 192.168.200.1/24 in the text box. 
+Static IP Pools	192.168.200.100 - 192.168.200.199
+Primary DNS	8.8.8.8
+
+
+Option 	Action 
+Name 	Enter private-routed in the text box. 
+Description 	Enter Routed organization VDC network for stark in the text box. 
+Gateway CIDR 	Enter 172.16.2.129/25 in the text box. 
+Static IP Pools	2
+Primary DNS	8.8.8.8
